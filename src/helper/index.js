@@ -4,11 +4,11 @@ import coffeeTable from ".././assets/coffee-table.jpg";
 import sofa from ".././assets/ergonomic-chair.jpg";
 import bookshelf from ".././assets/book-self.jpg";
 import marbleTable from ".././assets/marble-table.jpg";
-import upholsteredBed from ".././assets/upholstered-bed.jpg";
+import upholsteredBed from ".././assets/uphoisted-bed.jpg";
 import outdoorFurniture from ".././assets/outdoor-furniture.jpg";
 import officeErgonomic from ".././assets/office-ergonomic.jpg";
 import tvStand from ".././assets/simple-tv-stand.jpg";
-import wardrobe from ".././assets/walldrope.jpg";
+import wardrobe from ".././assets/walldrop.jpg";
 import bedsideTable from ".././assets/bedside-table.jpg";
 import sofaBed from ".././assets/sofa-bed.jpg";
 import floatingWallShelf from "../../src/assets/floating-bookshelf.jpg";
@@ -19,7 +19,7 @@ import roundDinning from ".././assets/round-dinning-table.jpg";
 import floorLamp from ".././assets/floor-lamp.jpg";
 import lSofa from "../../src/assets/l-shaped-sofa.jpg";
 
-const products = [
+export const products = [
   {
     id: 1,
     name: "Oakwood Dining Table",
@@ -301,4 +301,17 @@ const products = [
     reviewsCount: 198,
     image: lSofa,
   },
+];
+
+export const categories = [
+  { id: 0, label: "All", value: "All" },
+  { id: 1, label: "Dining", value: "Dining" },
+  { id: 2, label: "Seating", value: "Seating" },
+  { id: 3, label: "Living Room", value: "Living Room" },
+  { id: 4, label: "Storage", value: "Storage" },
+  { id: 5, label: "Bedroom", value: "Bedroom" },
+  { id: 6, label: "Outdoor", value: "Outdoor" },
+  { id: 7, label: "Office", value: "Office" },
+  { id: 8, label: "Kids", value: "Kids" },
+  { id: 9, label: "Lighting", value: "Lighting" },
 ];
