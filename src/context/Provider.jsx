@@ -1,21 +1,27 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import MyAppContext from "./Context";
-import { useEffect, useState } from "react";
-import { products } from "../helper";
+import { useState } from "react";
 
 const MyAppProvider = ({ children }) => {
   const location = useLocation();
-  const user = null;
+  const navigate = useNavigate();
+  const user = {
+    role: "admin",
+  };
   const isAuthenticated = false;
   const [adminProducts, setAdminProducts] = useState([]);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
 
   return (
     <MyAppContext.Provider
       value={{
         location,
         user,
+        navigate,
         isAuthenticated,
         adminProducts,
+        openMobileMenu,
+        setOpenMobileMenu,
         setAdminProducts,
       }}
     >

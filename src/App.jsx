@@ -11,6 +11,7 @@ import Dashboard from "./components/admin/Dashboard";
 import Orders from "./components/admin/Orders";
 import Products from "./components/admin/Products";
 import AddNewProduct from "./components/admin/AddNewProduct";
+import CheckAuth from "./common/CheckAuth";
 
 const App = () => {
   const { location } = useContext(MyAppContext);
@@ -27,7 +28,14 @@ const App = () => {
           <Route path="signup" element={<Signup />} />
           <Route path="login" element={<Login />} />
         </Route>
-        <Route path="/admin" element={<AdminLayout />}>
+        <Route
+          path="/admin"
+          element={
+            <CheckAuth>
+              <AdminLayout />
+            </CheckAuth>
+          }
+        >
           <Route path="add-new-product" element={<AddNewProduct />} />
           <Route path="products" element={<Products />} />
           <Route path="orders" element={<Orders />} />
