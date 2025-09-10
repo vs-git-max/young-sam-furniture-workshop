@@ -8,8 +8,8 @@ const AddNewProduct = () => {
   const [formData, setFormData] = useState(initialFormData);
 
   return (
-    <div className="max-h-screen w-full">
-      <div className="flex w-full justify-between md:flex-row  flex-col gap-2 items-center">
+    <div className="max-h-screen w-full p-5 lg:ml-64 h-full">
+      <div className="flex w-full justify-between md:flex-row  flex-col gap-2 items-center min-h-screen">
         <div className="flex flex-col gap-3 md:flex-1/2 flex-1">
           <Form
             formControls={addProductsFormControls}

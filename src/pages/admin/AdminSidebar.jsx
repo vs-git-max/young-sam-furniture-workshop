@@ -26,7 +26,7 @@ const AdminSidebar = () => {
   ];
 
   return (
-    <div className="hidden lg:block rounded-r-2xl bg-green-950 w-64 min-h-full ">
+    <div className="hidden lg:block rounded-r-2xl bg-green-950 w-64 min-h-full fixed ">
       <div className="flex flex-col gap-3 mt-4">
         {adminSidebarLinks.map((link) => {
           const Icon = link.icon;

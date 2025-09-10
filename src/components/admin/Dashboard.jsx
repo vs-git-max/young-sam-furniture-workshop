@@ -37,7 +37,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <div className=" ">
+    <div className="p-5 overflow-auto lg:ml-64">
       <h1 className="text-2xl font-bold text-green-950 underline text-shadow-green-900 text-shadow-xs">
         Admin Dashboard
       </h1>
@@ -52,7 +52,7 @@ const Dashboard = () => {
               {header.icon}
             </div>
 
-            <h1 className="text-green-950 font-bold text-4xl  text-center">
+            <h1 className="text-green-950 font-bold text-2xl  text-center">
               {header.label}
             </h1>
             <div className="flex items-baseline justify-between w-full">

@@ -21,7 +21,7 @@ const Products = () => {
   }, [setAdminProducts]);
 
   return (
-    <div className="">
+    <div className="lg:ml-64 p-5 overflow-auto">
       <div className="">
         <h1 className="text-2xl font-extrabold tracking-wide text-green-950 underline">
           Admin Products
@@ -43,7 +43,7 @@ const Products = () => {
         ))}
       </div>
 
-      <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 lg:gap-5 md:gap-4   md:grid-cols-3 lg:grid-cols-5">
+      <div className="mt-5 grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 lg:gap-5 md:gap-4  md:grid-cols-3  lg:grid-cols-4 xl:grid-cols-5">
         {filteredProducts.length > 0 &&
           filteredProducts.map((product) => (
             <ProductCard key={product.id} product={product} />
