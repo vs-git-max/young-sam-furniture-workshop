@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
       </div>
 
       <div className="flex w-full justify-between">
-        <button className="bg-green-950 py-2 px-3 mt-3 rounded-full font-bold text-sm cursor-pointer text-orange-700 ">
+        <button className="bg-green-950 py-2 px-3 mt-3 rounded-full font-bold text-sm cursor-pointer text-orange-500 ">
           edit product
         </button>
         <button className="text-white py-2 px-3 mt-3 rounded-full font-bold text-sm cursor-pointer bg-orange-700">

@@ -377,3 +377,30 @@ export const addProductsFormControls = [
     required: true,
   },
 ];
+export const navLinks = [
+  { id: 1, label: "Home", link: "/" },
+  { id: 2, label: "Shop", link: "/shop" },
+  {
+    id: 3,
+    label: "Categories",
+    link: "/categories",
+    subMenu: [
+      { id: "c0", label: "All", link: "/categories/all" },
+      { id: "c1", label: "Sofas", link: "/categories/sofas" },
+      { id: "c2", label: "Beds", link: "/categories/beds" },
+      { id: "c3", label: "Chairs", link: "/categories/chairs" },
+      { id: "c4", label: "Tables", link: "/categories/tables" },
+      { id: "c5", label: "Cabinets", link: "/categories/cabinets" },
+      { id: "c6", label: "Storage", link: "/categories/storage" },
+      { id: "c7", label: "Outdoor", link: "/categories/outdoor" },
+      { id: "c8", label: "Lighting", link: "/categories/lighting" },
+      { id: "c9", label: "Decor", link: "/categories/decor" },
+      { id: "c10", label: "Office", link: "/categories/office" },
+      { id: "c11", label: "Kids", link: "/categories/kids" },
+      { id: "c12", label: "Dining", link: "/categories/dining" },
+    ],
+  },
+  { id: 5, label: "Orders", link: "/orders" },
+  { id: 6, label: "About Us", link: "#about" },
+  { id: 7, label: "Contact", link: "/contact" },
+];
