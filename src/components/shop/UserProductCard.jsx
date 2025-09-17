@@ -13,16 +13,16 @@ const UserProductCard = ({ product }) => {
         />
         <div className="absolute flex w-full items-center  p-3 justify-between">
           <p className="bg-green-100 rounded-full text-sm font-bold tracking-wider py-1 px-3 text-green-950 ">
-            on discount
+            On discount
           </p>
           <p className="bg-orange-600 rounded-full text-sm font-bold tracking-wider py-1 px-3 text-green-950">
-            in stock
+            In stock
           </p>
         </div>
         <p className="font-bold text-lg text-green-950">{product?.name}</p>
         <div className="flex w-full items-center justify-between">
           <div className="flex flex-col gap-1 items-center shadow-xs p-0.5 rounded-lg shadow-orange-900">
-            <p className="text-sm font-bold text-green-900"> Price</p>
+            <p className="text-sm font-bold text-green-900 px-3"> Price</p>
             <p
               className={`${
                 product.salesPrice > 0 ? "line-through" : ""

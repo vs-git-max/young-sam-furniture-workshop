@@ -1,10 +1,12 @@
 import MyAppContext from "@/context/Context";
 import React, { useContext, useState } from "react";
 import UserProductCard from "./UserProductCard";
+import UserProductDetails from "./UserProductDetails";
 
 const OurProducts = () => {
   const { filteredProducts, navigate } = useContext(MyAppContext);
   const [numberOfItems, setNumberOfItems] = useState(5);
+  const [openProductDialog, setOpenProductDialog] = useState(false);
 
   const handleIncreasePageProducts = () => {
     setNumberOfItems((prev) => prev + 5);
@@ -40,6 +42,11 @@ const OurProducts = () => {
           Go to Products Page
         </button>
       )}
+
+      <UserProductDetails
+        openProductDialog={openProductDialog}
+        setOpenProductDialog={setOpenProductDialog}
+      />
     </section>
   );
 };
