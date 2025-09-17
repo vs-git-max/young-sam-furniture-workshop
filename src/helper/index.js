@@ -383,7 +383,7 @@ export const navLinks = [
   {
     id: 3,
     label: "Categories",
-    link: "/categories",
+    link: "#categories",
     subMenu: [
       { id: "c0", label: "All", link: "/categories/all" },
       { id: "c1", label: "Sofas", link: "/categories/sofas" },

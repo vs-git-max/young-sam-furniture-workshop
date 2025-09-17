@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import MyAppContext from "../../context/Context";
-import { categories, products } from "../../helper";
+import { categories } from "../../helper";
 import ProductCard from "./ProductCard";
 
 const Products = () => {
   const [filterParam, setFilterParam] = useState("All");
-  const { adminProducts, setAdminProducts } = useContext(MyAppContext);
+  const { adminProducts } = useContext(MyAppContext);
 
   const handleClick = (getValue) => {
     setFilterParam(getValue);
@@ -15,10 +15,6 @@ const Products = () => {
     filterParam === "All"
       ? adminProducts
       : adminProducts.filter((product) => product.category === filterParam);
-
-  useEffect(() => {
-    setAdminProducts(products);
-  }, [setAdminProducts]);
 
   return (
     <div className="lg:ml-64 p-5 overflow-auto">

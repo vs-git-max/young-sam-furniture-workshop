@@ -1,6 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import MyAppContext from "./Context";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { products } from "@/helper";
 
 const MyAppProvider = ({ children }) => {
   const location = useLocation();
@@ -10,7 +11,19 @@ const MyAppProvider = ({ children }) => {
   };
   const isAuthenticated = false;
   const [adminProducts, setAdminProducts] = useState([]);
+  const [userProducts, setUserProducts] = useState([]);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
+  const [filters, setFilters] = useState("All");
+
+  const filteredProducts =
+    filters === "All"
+      ? userProducts
+      : userProducts.filter((product) => product.category === filters);
+
+  useEffect(() => {
+    setAdminProducts(products);
+    setUserProducts(products);
+  }, [setAdminProducts]);
 
   return (
     <MyAppContext.Provider
@@ -18,9 +31,13 @@ const MyAppProvider = ({ children }) => {
         location,
         user,
         navigate,
+        filteredProducts,
+        filters,
         isAuthenticated,
         adminProducts,
+        userProducts,
         openMobileMenu,
+        setFilters,
         setOpenMobileMenu,
         setAdminProducts,
       }}

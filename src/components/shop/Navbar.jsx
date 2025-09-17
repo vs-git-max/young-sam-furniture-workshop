@@ -11,13 +11,12 @@ const Navbar = () => {
   const handleNavClick = (link) => {
     if (link.startsWith("#")) {
       const section = document.getElementById(link.replace("#", ""));
+      console.log(section);
       if (section) section.scrollIntoView({ behavior: "smooth" });
     } else {
       navigate(link);
     }
   };
-
-  console.log(openDropdown);
 
   return (
     <div className="max-w-screen bg-green-950 fixed left-0 right-0 z-1000">
@@ -44,14 +43,14 @@ const Navbar = () => {
               </button>
 
               {link.subMenu && openDropdown === link.id && (
-                <div className="rounded-md shadow-lg p-2 z-50 w-48 left-0 mt-1 bg-white text-black  absolute">
+                <div className="rounded-md shadow-lg p-2 z-50 w-56 left-0 mt-1 bg-white text-black  absolute space-x-3 space-y-3">
                   {link.subMenu.map((sub) => (
                     <button
                       key={sub.label}
-                      className=""
+                      className="text-sm font-bold text-green-950 py-0.5 px-1.5 rounded-2xl bg-green-50 cursor-pointer hover:bg-green-100 duration-300 transition-all"
                       onClick={() => handleNavClick(sub.link)}
                     >
-                      wueh
+                      {sub.label}
                     </button>
                   ))}
                 </div>
