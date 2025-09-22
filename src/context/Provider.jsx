@@ -10,12 +10,13 @@ const MyAppProvider = ({ children }) => {
     role: "admin",
   };
   const isAuthenticated = false;
-  const [adminProducts, setAdminProducts] = useState([]);
-  const [userProducts, setUserProducts] = useState([]);
-  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [filters, setFilters] = useState("All");
+  const [userProducts, setUserProducts] = useState([]);
+  const [adminProducts, setAdminProducts] = useState([]);
   const [productDetails, setProductDetails] = useState(null);
+  const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [openProductDialog, setOpenProductDialog] = useState(false);
+  const [openUserMobileMenu, setOpenUserMobileMenu] = useState(false);
 
   const filteredProducts =
     filters === "All"
@@ -44,6 +45,8 @@ const MyAppProvider = ({ children }) => {
         userProducts,
         openMobileMenu,
         setFilters,
+        openUserMobileMenu,
+        setOpenUserMobileMenu,
         setOpenMobileMenu,
         setAdminProducts,
       }}
