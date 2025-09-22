@@ -11,9 +11,7 @@ const StarRating = ({ rating }) => {
       {[...Array(fullStar)].map((_, i) => (
         <StarIcon key={`full ${i}`} className="text-orange-600 size-5" />
       ))}
-      {[...Array(halfStar)].map((_, i) => (
-        <StarHalf key={`half ${i}`} className="text-orange-600 size-5" />
-      ))}
+      {halfStar && <StarHalf className="text-orange-600 size-5" />}
       {[...Array(emptyStar)].map((_, i) => (
         <StarOff key={`empty ${i}`} className="text-orange-600 size-5" />
       ))}

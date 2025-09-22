@@ -14,6 +14,8 @@ const MyAppProvider = ({ children }) => {
   const [userProducts, setUserProducts] = useState([]);
   const [openMobileMenu, setOpenMobileMenu] = useState(false);
   const [filters, setFilters] = useState("All");
+  const [productDetails, setProductDetails] = useState(null);
+  const [openProductDialog, setOpenProductDialog] = useState(false);
 
   const filteredProducts =
     filters === "All"
@@ -31,8 +33,12 @@ const MyAppProvider = ({ children }) => {
         location,
         user,
         navigate,
+        productDetails,
+        setProductDetails,
         filteredProducts,
         filters,
+        openProductDialog,
+        setOpenProductDialog,
         isAuthenticated,
         adminProducts,
         userProducts,
