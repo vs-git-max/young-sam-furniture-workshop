@@ -27,8 +27,6 @@ const Navbar = () => {
     }
   };
 
-  console.log(openUserMobileMenu);
-
   return (
     <div className="max-w-screen bg-green-950 fixed left-0 right-0 z-1000">
       <div className=" items-center justify-between w-full flex  px-2 py-2">
