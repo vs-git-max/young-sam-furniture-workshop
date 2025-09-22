@@ -42,6 +42,7 @@ const Footer = () => {
               <div className="flex flex-col items-start  gap-3">
                 {foot.links.map((footLink) => (
                   <a
+                    key={footLink.name}
                     href={footLink.href}
                     className="text-green-50 font-semibold hover:underline hover:text-green-200 transition-all duration-150 "
                   >

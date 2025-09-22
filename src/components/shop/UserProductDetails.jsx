@@ -16,6 +16,8 @@ const UserProductDetails = () => {
     setProductDetails(null);
   };
 
+  console.log(productDetails);
+
   return (
     <Dialog open={openProductDialog} onOpenChange={handleOnOpenChange}>
       <DialogContent>
@@ -28,13 +30,27 @@ const UserProductDetails = () => {
             </DialogHeader>
 
             <div className="flex items-center flex-col gap-3">
-              <div className="w-64 h-auto">
+              <div className="lg:w-full md:w-96 w-80 relative">
                 <img
                   src={productDetails.image}
                   alt={productDetails.name}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover rounded-2xl aspect-square"
                 />
+                <div className="absolute top-0 left-0 right-0 flex w-full justify-between items-center px-3 pt-2">
+                  <p className="tracking-wide font-semibold  text-sm  text-green-950 bg-green-100 py-1 px-2 rounded-full">
+                    On offer
+                  </p>
+                  <p className="tracking-wide font-semibold  text-sm  text-orange-600 bg-green-900 py-1 px-2 rounded-full">
+                    37
+                  </p>
+                  <p className="tracking-wide font-semibold  text-sm  text-orange-600 bg-orange-100 py-1 px-2 rounded-full">
+                    In stock
+                  </p>
+                </div>
               </div>
+              <p className="font-medium text-sm text-green-900">
+                {productDetails?.description}
+              </p>
 
               <div className="flex gap-2 w-full items-center justify-between">
                 <div className="flex flex-col gap-1 items-center shadow-xs p-0.5 rounded-lg shadow-orange-900">
@@ -66,6 +82,11 @@ const UserProductDetails = () => {
                     </p>
                   </div>
                 )}
+              </div>
+              <div className="w-full">
+                <button className="text-lg font-medium text-green-900 bg-orange-700 cursor-pointer hover:opacity-95 w-full rounded-3xl">
+                  Add to Cart
+                </button>
               </div>
             </div>
           </>
