@@ -1,3 +1,4 @@
+import Logo from "@/components/shop/Logo";
 import {
   Sheet,
   SheetContent,
@@ -46,7 +47,9 @@ const AdminSidebar = () => {
       <Sheet open={openMobileMenu} onOpenChange={setOpenMobileMenu}>
         <SheetContent side="left" className="bg-green-950 w-64">
           <SheetHeader>
-            <SheetTitle>Logo</SheetTitle>
+            <SheetTitle>
+              <Logo />
+            </SheetTitle>
           </SheetHeader>
           <div className="flex flex-col gap-3">
             {adminSidebarLinks.map((link) => {
@@ -64,7 +67,10 @@ const AdminSidebar = () => {
               );
             })}
           </div>
-          <SheetDescription>This is the admin panel</SheetDescription>
+          <SheetDescription className="text-orange-600 text-sm font-medium">
+            Discover pieces that blend comfort, style, and durability— made to
+            feel like they’ve always belonged in your home.
+          </SheetDescription>
         </SheetContent>
       </Sheet>
     </div>
