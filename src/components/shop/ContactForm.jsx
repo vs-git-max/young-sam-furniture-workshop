@@ -1,0 +1,37 @@
+import React from "react";
+import Logo from "./Logo";
+
+const ContactForm = () => {
+  return (
+    <div className=" absolute  lg:inset-20 flex items-center justify-between  w-full lg:max-w-5xl mx-auto bg-green-950  py-12 px-8 lg:shadow-lg lg:shadow-white rounded-2xl lg:w-2/3 lg:max-h-5/12 lg:h-auto gap-5">
+      <div className="flex-1/2">
+        <Logo />
+        <p className="text-green-50 font-bold text-sm">
+          We design modern furniture that balances style and function, offering
+          durable, affordable, and beautiful pieces made to suit your lifestyle
+          perfectly.
+        </p>
+      </div>
+      <div className="flex-1/2 flex flex-col gap-5">
+        <h1 className="text-xl lg:text-2xl text-center font-bold text-orange-700">
+          Subscribe to our news letter
+        </h1>
+        <form action="" className="min-w-full flex flex-col gap-5">
+          <input
+            type="email"
+            placeholder="Enter your email..."
+            className="w-full bg-green-50 rounded-xl py-2 px-4 outline-none caret-green-950 text-md font-semibold text-green-950"
+          />
+          <button
+            type="submit"
+            className="w-full tracking-wider bg-orange-700 rounded-full py-1 font-bold text-green-950 text-lg"
+          >
+            Subscribe
+          </button>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default ContactForm;

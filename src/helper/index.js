@@ -1,3 +1,4 @@
+import { Facebook, Instagram, Twitter } from "lucide-react";
 import dinningTable from ".././assets/dinning-set.jpg";
 import velvetSeat from ".././assets/velvet-seat.jpg";
 import coffeeTable from ".././assets/coffee-table.jpg";
@@ -403,4 +404,65 @@ export const navLinks = [
   { id: 5, label: "Orders", link: "/orders" },
   { id: 6, label: "About Us", link: "#about" },
   { id: 7, label: "Contact", link: "/contact" },
+];
+
+export const footerNav = [
+  {
+    title: "Navigation",
+    links: [
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Products", href: "/products" },
+      { name: "Contact", href: "/contact" },
+    ],
+  },
+  {
+    title: "Support",
+    links: [
+      { name: "FAQs", href: "/faqs" },
+      { name: "Shipping", href: "/shipping" },
+      { name: "Returns", href: "/returns" },
+      { name: "Warranty", href: "/warranty" },
+    ],
+  },
+  {
+    title: "Categories",
+    links: categories
+      .filter((cat) => cat.value !== "All") // skip "All" if you don’t want it
+      .map((cat) => ({
+        name: cat.label,
+        href: `/categories/${cat.value.toLowerCase().replace(/\s+/g, "-")}`,
+      })),
+  },
+  {
+    title: "Company",
+    links: [
+      { name: "Careers", href: "/careers" },
+      { name: "Blog", href: "/blog" },
+      { name: "Press", href: "/press" },
+    ],
+  },
+];
+
+// socialLinks.js
+
+export const socialLinks = [
+  {
+    id: 1,
+    name: "Facebook",
+    href: "https://facebook.com/yourpage",
+    icon: Facebook,
+  },
+  {
+    id: 2,
+    name: "Instagram",
+    href: "https://instagram.com/yourpage",
+    icon: Instagram,
+  },
+  {
+    id: 3,
+    name: "Twitter",
+    href: "https://twitter.com/yourpage",
+    icon: Twitter,
+  },
 ];
