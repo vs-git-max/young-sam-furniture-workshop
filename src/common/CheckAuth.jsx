@@ -13,6 +13,10 @@ const CheckAuth = ({ children }) => {
     navigate("/");
   }
 
+  if (!user && !isAuthenticated && location.pathname.includes("/cart")) {
+    navigate("/auth/login");
+  }
+
   return children;
 };
 

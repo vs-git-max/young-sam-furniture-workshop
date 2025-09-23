@@ -6,9 +6,7 @@ import { products } from "@/helper";
 const MyAppProvider = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const user = {
-    role: "admin",
-  };
+  const user = null;
   const isAuthenticated = false;
   const [filters, setFilters] = useState("All");
   const [userProducts, setUserProducts] = useState([]);
