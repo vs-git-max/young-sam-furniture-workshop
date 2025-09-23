@@ -67,7 +67,7 @@ const AdminSidebar = () => {
               );
             })}
           </div>
-          <SheetDescription className="text-orange-600 text-sm font-medium">
+          <SheetDescription className="text-orange-600npm text-sm font-medium">
             Discover pieces that blend comfort, style, and durability— made to
             feel like they’ve always belonged in your home.
           </SheetDescription>

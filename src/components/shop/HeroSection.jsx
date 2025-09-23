@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import bgBanner3 from "../../assets/banner-b3.jpg";
 import bgBanner2 from "../../assets/banner-b2.jpg";
+import MyAppContext from "@/context/Context";
 
 const HeroSection = () => {
+  const { navigate } = useContext(MyAppContext);
+
   return (
     <section className="pt-10 lg:pt-11 bg-green-50 w-full h-screen">
       <div className="relative w-full h-full">
@@ -26,7 +29,7 @@ const HeroSection = () => {
               feel like they’ve always belonged in your home.
             </p>
             <div className="flex gap-5 mt-5">
-              <button className="bg-orange-600 text-green-50 font-bold py-2 px-4 rounded-3xl hover:opacity-95 transition-all">
+              <button className="bg-orange-600 text-green-50 font-bold py-2 px-4 rounded-3xl hover:opacity-95 transition-all"  onClick={navigate('/shop')}>
                 Explore
               </button>
               <button className="bg-green-950 text-orange-600 font-bold py-2 px-4 rounded-3xl hover:opacity-95 transition-all">

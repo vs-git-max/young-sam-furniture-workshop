@@ -12,8 +12,6 @@ const ContactForm = () => {
     e.preventDefault();
   };
 
-  console.log(formData);
-
   return (
     <div className=" absolute  lg:inset-20 flex items-center justify-between  w-full lg:max-w-5xl mx-auto bg-green-950  py-12 px-8 lg:shadow-sm lg:shadow-green-50 rounded-2xl lg:w-2/3 lg:max-h-5/12 lg:h-auto gap-5">
       <div className="flex-1/2">

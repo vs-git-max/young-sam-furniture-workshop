@@ -411,8 +411,8 @@ export const footerNav = [
     title: "Navigation",
     links: [
       { name: "Home", href: "/" },
-      { name: "About", href: "/about" },
-      { name: "Products", href: "/products" },
+      { name: "About", href: "#about" },
+      { name: "Shop", href: "/shop" },
       { name: "Contact", href: "/contact" },
     ],
   },

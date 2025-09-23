@@ -16,8 +16,6 @@ const UserProductDetails = () => {
     setProductDetails(null);
   };
 
-  console.log(productDetails);
-
   return (
     <Dialog open={openProductDialog} onOpenChange={handleOnOpenChange}>
       <DialogContent>

@@ -1,7 +1,6 @@
 import React from "react";
 
 const ProductCard = ({ product }) => {
-  console.log(product);
   return (
     <div className="py-4 px-3  shadow-md rounded-2xl min-h-auto ">
       <div className="w-64 relative">

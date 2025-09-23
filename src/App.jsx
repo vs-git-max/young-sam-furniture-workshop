@@ -12,6 +12,8 @@ import Orders from "./components/admin/Orders";
 import Products from "./components/admin/Products";
 import AddNewProduct from "./components/admin/AddNewProduct";
 import CheckAuth from "./common/CheckAuth";
+import Shop from "./pages/shop/Shop";
+import Cart from "./pages/shop/Cart";
 
 const App = () => {
   const { location } = useContext(MyAppContext);
@@ -41,6 +43,17 @@ const App = () => {
           <Route path="orders" element={<Orders />} />
           <Route path="dashboard" element={<Dashboard />} />
         </Route>
+
+        <Route path="/shop" element={<Shop />} />
+
+        <Route
+          path="/cart"
+          element={
+            <CheckAuth>
+              <Cart />
+            </CheckAuth>
+          }
+        />
       </Routes>
       {!displayNavAndFooter && <Footer />}
     </Fragment>

@@ -20,7 +20,6 @@ const Navbar = () => {
   const handleNavClick = (link) => {
     if (link.startsWith("#")) {
       const section = document.getElementById(link.replace("#", ""));
-      console.log(section);
       if (section) section.scrollIntoView({ behavior: "smooth" });
     } else {
       navigate(link);
@@ -74,11 +73,17 @@ const Navbar = () => {
           ))}
         </div>
         <div className="space-x-2 flex">
-          <button className="bg-white py-0.5 px-2 rounded-4xl font-bold text-sm tracking-wider text-green-950 hover:opacity-95 cursor-pointer flex items-center gap-2">
+          <button
+            onClick={() => navigate("/cart")}
+            className="bg-white py-0.5 px-2 rounded-4xl font-bold text-sm tracking-wider text-green-950 hover:opacity-95 cursor-pointer flex items-center gap-2"
+          >
             <ShoppingCart className="size-5" />
             cart
           </button>
-          <button className="bg-orange-600  text-green-950 py-0.5 px-2 rounded-4xl font-bold text-sm hover:opacity-95 cursor-pointer">
+          <button
+            onClick={() => navigate("/auth/login")}
+            className="bg-orange-600  text-green-950 py-0.5 px-2 rounded-4xl font-bold text-sm hover:opacity-95 cursor-pointer"
+          >
             Signup
           </button>
         </div>

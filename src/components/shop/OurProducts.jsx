@@ -4,9 +4,13 @@ import UserProductCard from "./UserProductCard";
 import UserProductDetails from "./UserProductDetails";
 
 const OurProducts = () => {
-  const { filteredProducts, navigate } = useContext(MyAppContext);
+  const {
+    filteredProducts,
+    navigate,
+    openProductDialog,
+    setOpenProductDialog,
+  } = useContext(MyAppContext);
   const [numberOfItems, setNumberOfItems] = useState(5);
-  const [openProductDialog, setOpenProductDialog] = useState(false);
 
   const handleIncreasePageProducts = () => {
     setNumberOfItems((prev) => prev + 5);
@@ -39,7 +43,7 @@ const OurProducts = () => {
           onClick={() => handleIncreasePageProducts()}
           className="mt-10 bg-green-50 text-green-950 py-2 px-5 rounded-lg font-bold text-lg cursor-pointer"
         >
-          Go to Products Page
+          Go to Shop Page
         </button>
       )}
 
