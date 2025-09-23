@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import MyAppContext from "../context/Context";
 
 const CheckAuth = ({ children }) => {
