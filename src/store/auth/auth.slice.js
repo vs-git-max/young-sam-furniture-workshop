@@ -9,7 +9,7 @@ const initialState = {
 
 export const signup = createAsyncThunk("/auth/signup", async (formData) => {
   const res = await axios.post(
-    "http://localhost:8003/api/v1/auth/signup",
+    "https://furnisort-backend.onrender.com/api/v1/auth/signup",
     formData,
     { withCredentials: true }
   );
