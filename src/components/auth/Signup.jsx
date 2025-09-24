@@ -1,9 +1,16 @@
 import Form from "@/common/Form";
+import MyAppContext from "@/context/Context";
 import { registerFormControls } from "@/helper";
-import React, { useState } from "react";
+import { signup } from "@/store/auth/auth.slice";
+import React, { useContext, useState } from "react";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
+import { toast } from "sonner";
 
 const Signup = () => {
+  const dispatch = useDispatch();
+  const { navigate } = useContext(MyAppContext);
+
   const initialFormData = {
     username: "",
     email: "",
@@ -12,7 +19,20 @@ const Signup = () => {
 
   const [formData, setFormData] = useState(initialFormData);
 
-  const onSubmit = () => {};
+  const onSubmit = (e) => {
+    e.preventDefault();
+    setFormData(initialFormData);
+
+    dispatch(signup(formData)).then((data) => {
+      if (data?.payload?.success) {
+        toast.success(data?.payload?.message);
+        navigate("/auth/login");
+      } else {
+        console.log(data);
+        toast.error(data?.payload?.message);
+      }
+    });
+  };
 
   return (
     <div>
