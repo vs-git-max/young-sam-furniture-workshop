@@ -1,5 +1,5 @@
+import api from "@/helper/axios.instance";
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
 
 const initialState = {
   isLoading: true,
@@ -8,11 +8,9 @@ const initialState = {
 };
 
 export const signup = createAsyncThunk("/auth/signup", async (formData) => {
-  const res = await axios.post(
-    "https://furnisort-backend.onrender.com/api/v1/auth/signup",
-    formData,
-    { withCredentials: true }
-  );
+  const res = await api.post("/auth/signup", formData, {
+    withCredentials: true,
+  });
 
   return res?.data;
 });
